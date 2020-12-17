@@ -2,11 +2,12 @@
 # Iterative Control Structure/Backward Branch
 
 # for
-# for <identifier> in <iterable>:
+# for <identifier> in <iterable>: #.1
 #   statement0
 #   statement1
 #   ...
 #   statementn
+# #.2
 
 # <iterable>: Container Types
 # <iterable>: List, Tuple, Dict, Set, String, Range
@@ -31,6 +32,8 @@ print(i)
 
 # len(l0) = 4
 # range(4) = (0, 1, 2, 3)
+# range(start, stop, step)
+
 
 print(tuple(range(0, len(l0))))
 
@@ -97,12 +100,13 @@ while i < 5:
 
 # continue
 i = 0
-while i < 5:  # ...
+while i < 5:  # .1
     if i == 3:
         i = i + 1
-        continue
+        continue  # -> #.1
     print(i)
     i = i + 1
+# .2
 
 # break
 i = 0
@@ -132,7 +136,6 @@ i = 0
 while True:
     if i >= 5:
         break
-
     print(i)
 
     i = i + 1
@@ -153,3 +156,15 @@ for i in l5:
 
 for j in range(len(l5)):
     print(l5[j])
+
+
+i = 0
+j = 0
+while i < 5:
+    j = 0
+    while j < 5:
+        print(i, j)
+        j = j + 1
+
+    i = i + 1
+

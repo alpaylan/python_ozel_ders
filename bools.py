@@ -1,10 +1,10 @@
 b0 = bool()
 b1 = bool(True)
 b2 = bool(False)
-b3 = bool(1)
-b4 = bool(0)
-b5 = bool(-1)
-b6 = bool(2)
+b3 = bool(1)  # True
+b4 = bool(0)  # # False
+b5 = bool(-1)  # True
+b6 = bool(2)  # True
 b7 = True
 b8 = False
 
@@ -26,8 +26,8 @@ b8 = False
 # print(b9)
 # print(b10)
 
-b11 = 5 != 5
-b12 = 5 != 7
+b11 = (5 != 5)  # False
+b12 = (5 != 7)  # True
 # print(b11)
 # print(b12)
 # <, <=, >, >=
@@ -43,17 +43,25 @@ b16 = 5 >= 5
 # print(b16)
 
 # Logical Ops
-# and, or, xor
+# and, or, xor, not
 b17 = True
 b18 = False
-b19 = ((not 5 == 5) or b17) and b18 and True and False
+b19 = not 5 == 5 or b17 and b18 and True and False
 # b19 = (True or True) and False and True and False
 # b19 = (True and False) and True and False
 # b19 = (False and True) and False
 # b19 = (False and False)
 # b19 = False
 # Precedence Table
+# b19 = not 5 == 5 or b17 and b18 and True and False
+# b19 = not True or True and False and True and False
+# b19 = False or True and False and True and False
+# b19 = False or False and True and False
+# b19 = False or False and False
+# b19 = False or False
+# b19 = False
 # not > and > or
+print("b19", b19)
 
 b19_ = b17 & b18
 b20 = b17 or b18
@@ -68,7 +76,12 @@ print(b19)
 # print(b20_)
 # print(b21)
 
+
 # bx = (a = 5) | (b = 7) -> forbidden
 
-
-
+# Statement vs Expression
+# Expressions have values
+# a = expr
+# Statements don't have values
+# a = statement (x)
+# Assignment is a statement

@@ -9,7 +9,6 @@ d2 = {
     "serhan": 4,
     False: "keles",
     True: d1,
-
 }
 
 # Get value of key
@@ -26,7 +25,6 @@ print(d2['serhan'] + d2['alperen'])
 # Keys must be hashable
 # Hashable means corresponding to a unique number
 # Dicts are mutable
-# Addable
 d2['alperen'] = 5
 d2['turan'] = 7
 
@@ -41,6 +39,7 @@ d4 = {
     # [1, 3]: 5,
     2: 2.5,
     b: 4,
+    a: 5,
 }
 
 # d5 = d3 + d4

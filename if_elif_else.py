@@ -1,6 +1,7 @@
 
 b0 = 5 == 5  # True
-l0 = []
+b1 = bool([])
+
 
 age = 22
 cond1 = age < 20
@@ -10,6 +11,7 @@ if cond1:
     print('Don\'t rent a car')
 else:   # if not cond1:
     print('Rent a car')
+# ...
 
 price = 100
 balance = 80
@@ -33,16 +35,16 @@ grade = 75
 
 if grade >= AA:
     print('AA')
-else:
+else:  # grade < AA(90)
     if grade >= BB:
         print('BB')
-    else:
+    else:  # grade < BB(80)
         if grade >= CC:
             print('CC')
-        else:
+        else:  # grade < CC(70)
             if grade >= DD:
                 print('DD')
-            else:
+            else:  # grade < DD(60)
                 print('FF')
 
 

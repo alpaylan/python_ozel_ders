@@ -16,7 +16,8 @@ r_value = first_char_capitalized("alperen")
 # a -> A
 # b -> B
 # ...
-# aa -> A
+# aa -> Aa
+# aA -> Aa
 
 print(r_value)
 
@@ -33,8 +34,12 @@ def sqr(x):
     sqr_x = sqr_x * sqr_x
     return sqr_x
 
+def sqr2(x):
+    x = x * x
+    return x
+
 x = 5
-a = sqr(x)
+a = sqr2(x)
 
 # f(x) = x*x
 
@@ -47,6 +52,9 @@ def sumlist(l):
 
     return s
 
+myls = [1, 2, 7, 9]
+mysum = sumlist(myls)
+print(myls)
 
 def sumlistc(l):
     sumlist_l = l
@@ -126,12 +134,16 @@ def print_5_7_9():
 # print("7")
 # print("9")
 
-
+def print3x_5_7_9():
+    print_5_7_9()
+    print_5_7_9()
+    print_5_7_9()
 
 # print_5_7_9()
 # print_5_7_9()
 # print_5_7_9()
 
+# print3x5_77
 def f(arr):
     return arr*arr
 twentyfive= f(5)
