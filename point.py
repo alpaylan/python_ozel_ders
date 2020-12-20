@@ -81,6 +81,9 @@ class QuadraticFunction:
         str_c = str(self.c)
         return "f(x) = " + str_a + "x^2 + " + str_b + "x + " + str_c
 
+
+
+
     def discriminant(self):
         # b^2 - 4ac
         return self.b**2 - 4*self.a*self.c

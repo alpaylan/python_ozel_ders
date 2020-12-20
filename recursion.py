@@ -7,10 +7,12 @@
 # fib(n - (n - 2)) = fib(2) = 1
 # fib(n - (n - 3)) = fib(3) = fib(3 - 1) + fib(3 - 2) = 0 + 1 = 1
 def fib(n):
+    # Base Case
     if n <= 1:
         return 0
     if n == 2:
         return 1
+    # Recursive Case
     else:
         return fib(n - 1) + fib(n - 2)
 
@@ -38,6 +40,30 @@ def fib(n):
 #               lmin(0)
 #                   0
 
+
+def l_min_it(l):
+    min = l[0]
+    for i in l:
+        if i < min:
+            min = i
+
+    return min
+
+minimum_of_list = l_min_it([3, 7, 1, 9, 8])
+
+
+# list = elem|rest
+# list = [3, 7, 1, 9, 8]
+# list = 3 | [7, 1, 9, 8]
+# l_min([3, 7, 1, 9, 8])
+#   if 3 < l_min([7, 1, 9, 8]):
+#       then return 3
+#   else return l_min([7, 1, 9, 8])
+# l_min([7, 1, 9, 8])
+#   if 7 < l_min([1, 9, 8]):
+#       then return 7
+
+
 def l_min(l):
     # Base Case
     if len(l) == 1:
@@ -50,6 +76,29 @@ def l_min(l):
         return r_min
     else:
         return f_elem
+
+
+
+def l_search_it(l, x):
+    for i in l:
+        if i == x:
+            return True
+
+    return False
+
+
+def l_search2(l, x):
+    # Base Case
+    if len(l) == 1:
+        if l[0] == x:
+            return True
+        else:
+            return False
+    # Recursive Case
+    if l[0] == x:
+        return True
+    else:
+        return l_search2(l[1:], x)
 
 def l_search(l, x):
     # Base Case
@@ -73,7 +122,8 @@ def l_search(l, x):
 # 1213121
 # cetvel(4)
 # 121312141213121
-
+# cetvel(5)
+# 1213121412131215121312141213121
 def cetvel(n):
     if n == 1:
         return "1"

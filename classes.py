@@ -14,6 +14,21 @@
 # print(c0.real)
 # print(c0.imag)
 
+# Object Oriented Programming Paradigm
+# Imperative Programming Paradigm
+# Functional Programming Paradigm
+# Logical Programming Paradigm
+# Concurrent Programming Paradigm
+# OOP
+# Objects, Attributes, Relations and Engagements
+# Kalem: Ömür, Uzunluk, Yazabildiği Yüzeyler
+# Tükenmez Kalem, Kurşun Kalem
+# İnsan
+# İnsan: Öğrenci, Hemşire, Polis, Mühendis
+# Öğrenci: Lise, Üniversite
+# Üniversite: Beşeri, Mühendislik
+# Mühendislik: EE, CENG
+
 class MyComplex:
     def __init__(self, real, imag):
         self.real = real
@@ -28,6 +43,24 @@ class MyComplex:
 
         return MyComplex(new_real, new_imag)
 
+    def __add__(self, other_complex):
+        new_real = self.real + other_complex.real
+        new_imag = self.imag + other_complex.imag
+
+        return MyComplex(new_real, new_imag)
+
+    def __sub__(self, other):
+        new_real = self.real - other.real
+        new_imag = self.imag - other.imag
+
+        return MyComplex(new_real, new_imag)
+
+    def __abs__(self):
+        return (self.real**2 + self.imag**2)**0.5
+
+    def __bool__(self):
+        return True
+
     def add_real(self, other_real):
         new_real = self.real + other_real
         new_imag = self.imag
@@ -37,11 +70,10 @@ class MyComplex:
     def copy(self):
         return MyComplex(self.real, self.imag)
 
+
 c0 = MyComplex(3, 5)
-cn = c0.copy()
-c0.imag = 2
+# MyComplex(c0, 3, 5)
 print(c0)
-print(cn)
 
 c1 = MyComplex(2, 4)
 print(c1)
@@ -51,6 +83,10 @@ print(c2)
 
 c3 = c0.add_real(6)
 print(c3)
+
+c4 = c0 + c1
+print(c4)
+
 
 # print('(' + str(c2.real) + '+' + str(c2.imag) + 'j)')
 
