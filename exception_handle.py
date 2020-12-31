@@ -23,12 +23,14 @@ def mydiv(x, y):
         return x/y
 
 
+print(mydiv(5, 0))
+print("Bye")
+
+# try:
+#     print(mydiv(5, 0))
+# except:
+#     print("Bölemedik")
+
 # print(div(5, 0))
 # print("Bye")
-
-try:
-    print(mydiv(5, 0))
-except:
-    print("Bölemedik")
-
 
